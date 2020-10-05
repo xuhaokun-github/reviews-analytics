@@ -6,8 +6,9 @@ with open('reviews (1).txt','r') as f:
 		count += 1	
 		if count % 1000 == 0:
 			print(len(data))
-print(len(data))
+print('档案读取完了,总共有', len(data), '笔留言')
 
-print(data[0])
-print('-----------------')
-print(data[1])
+sum_len = 0
+for d in data:
+	sum_len = sum_len + len(d)
+print('留言的平均长度是', sum_len/len(data))
